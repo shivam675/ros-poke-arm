@@ -1,0 +1,15 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+arm_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - p0_joint
+    - p1_joint
+    - p2_joint
+    - p3_joint
+    - p4_joint
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
